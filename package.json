@@ -1,0 +1,14 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "Node API",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Zollo",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
