@@ -10,11 +10,14 @@
   "author": "Zollo",
   "license": "ISC",
   "devDependencies": {
+    "colors": "^1.4.0",
     "cross-env": "^6.0.3",
     "nodemon": "^1.19.4"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.7.10",
+    "morgan": "^1.9.1"
   }
 }
