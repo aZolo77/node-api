@@ -2,7 +2,7 @@
 
 ## Links:
 
-- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [31]
+- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [36]
 - [API Specification](https://gist.github.com/bradtraversy/01adb248df70fb29e98c30cf659042cf)
 - [API Documentation](http://devcamper.io/)
 - [Finished API](https://github.com/bradtraversy/devcamper-api)
@@ -17,9 +17,6 @@
 
 ## Extensions:
 
-- [Synchronize Settings](https://artslab.info/vscode/sync-vs-code-settings-between-devices)
-- [Settings Gist](https://gist.github.com/aZolo77/50d2806dc21a142c0a6dad3288b48673)
-- [Generate Token](https://github.com/settings/tokens/)
 - [Maps](https://developer.mapquest.com/)
 
 ## Dependencies:
@@ -30,3 +27,9 @@
 - [morgan](https://www.npmjs.com/package/morgan) - logger middleware
 - [dotenv](https://www.npmjs.com/package/dotenv) - loads environment variables from a .env file
 - [node-geocoder](http://nchaulet.github.io/node-geocoder/) - library for geocoding
+
+# Auxiliary:
+
+- [Synchronize Settings](https://artslab.info/vscode/sync-vs-code-settings-between-devices)
+- [Settings Gist](https://gist.github.com/aZolo77/50d2806dc21a142c0a6dad3288b48673)
+- [Generate Token](https://github.com/settings/tokens/)

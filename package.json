@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node server",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "insert-data": "node seeder.js -i",
+    "delete-data": "node seeder.js -d"
   },
   "author": "Zollo",
   "license": "ISC",
