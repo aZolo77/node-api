@@ -11,8 +11,8 @@ const filterData = queryStr => {
   // > {"lte":"10000"} => {"$lte":"10000"}
   queryStr = queryStr.replace(/\b(gt|gte|lt|lte|in)\b/g, match => `$${match}`);
 
-  // - finding resource
-  return Bootcamp.find(JSON.parse(queryStr));
+  // - finding resource and populate it with courses it has
+  return Bootcamp.find(JSON.parse(queryStr)).populate("courses");
 };
 
 // - select fields (ex: ?select=name,description,housing)
@@ -37,7 +37,7 @@ const sortData = (req, query) => {
 // - paginate over sources (ex: ?page=2&limit=2)
 const paginateData = (req, query, total) => {
   const page = parseInt(req.query.page, 10) || 1;
-  console.log(`Limit: ${req.query.limit}`);
+  // console.log(`Limit: ${req.query.limit}`);
   const limit = parseInt(req.query.limit, 10) || 2; // per page
   const startIndex = (page - 1) * limit;
   const endIndex = page * limit;
@@ -59,10 +59,10 @@ const paginateData = (req, query, total) => {
     };
   }
 
-  console.log(
-    `limit: ${limit}, startIndex: ${startIndex}, endIndex: ${endIndex}, total: ${total}, pagination: `,
-    pagination
-  );
+  // console.log(
+  //   `limit: ${limit}, startIndex: ${startIndex}, endIndex: ${endIndex}, total: ${total}, pagination: `,
+  //   pagination
+  // );
 
   return {
     finishedQuery: query.skip(startIndex).limit(limit),
@@ -84,6 +84,7 @@ const excludeReservedWords = reqQuery => {
 // - building query
 const buildQuery = (req, total) => {
   let query;
+
   // - copy req.query
   const reqQuery = { ...req.query };
 
@@ -172,13 +173,16 @@ exports.updateBootcamp = asyncHandler(async (req, res, next) => {
 // @route   Delete /api/v1/bootcamps/:id
 // @access  Private
 exports.deleteBootcamp = asyncHandler(async (req, res, next) => {
-  const bootcamp = await Bootcamp.findByIdAndDelete(req.params.id);
+  const bootcamp = await Bootcamp.findById(req.params.id);
 
   if (!bootcamp) {
     return next(
       new ErrorResponse(`Bootcamp not found with id of ${req.params.id}`, 404)
     );
   }
+
+  // - triggers the middleware of removing bootcamp with its associated courses
+  bootcamp.remove();
 
   res.status(200).json({
     success: true,
