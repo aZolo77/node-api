@@ -1,6 +1,8 @@
 // - dependencies
 const express = require("express");
 const dotenv = require("dotenv");
+const fileupload = require("express-fileupload");
+const path = require("path");
 const colors = require("colors");
 
 // * middleware
@@ -23,6 +25,7 @@ connectDB();
 // - routes
 const bootcamps = require("./routes/bootcamps");
 const courses = require("./routes/courses");
+const auth = require("./routes/auth");
 
 // - app init
 const app = express();
@@ -35,9 +38,16 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
+// * file uploading middleware
+app.use(fileupload());
+
+// - set static folder (ex: /uploads/photo_5d725a1b7b292f5f8ceff788.jpg)
+app.use(express.static(path.join(__dirname, "public")));
+
 // * mount routers
 app.use("/api/v1/bootcamps", bootcamps);
 app.use("/api/v1/courses", courses);
+app.use("/api/v1/auth", auth);
 
 // - handling errors
 app.use(errorHandler);
