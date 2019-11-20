@@ -2,7 +2,7 @@
 
 ## Links:
 
-- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [45]
+- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [51]
 - [API Specification](https://gist.github.com/bradtraversy/01adb248df70fb29e98c30cf659042cf)
 - [API Documentation](http://devcamper.io/)
 - [Finished API](https://github.com/bradtraversy/devcamper-api)
@@ -29,6 +29,8 @@
 - [node-geocoder](http://nchaulet.github.io/node-geocoder/) - library for geocoding
 - [express-fileupload](https://www.npmjs.com/package/express-fileupload) - for uploading files
 - [bcryptjs](https://www.npmjs.com/package/bcryptjs) - for encrypting passwords
+- [jsonwebtoken](https://jwt.io/) - creating json web tokens
+- [cookie-parser](https://www.npmjs.com/package/cookie-parser) - parse Cookie header and populate req.cookies with an object keyed by the cookie names
 
 # Auxiliary:
 

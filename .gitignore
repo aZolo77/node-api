@@ -1,3 +1,4 @@
 node_modules/
 config/config.env
 .vscode/settings.json
+algorithm.md

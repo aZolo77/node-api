@@ -2,6 +2,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const fileupload = require("express-fileupload");
+const cookieParser = require("cookie-parser");
 const path = require("path");
 const colors = require("colors");
 
@@ -32,6 +33,9 @@ const app = express();
 
 // - body parser (parses req.body)
 app.use(express.json());
+
+// - cockie parser (parses req.cookies)
+app.use(cookieParser());
 
 // * dev logging middleware
 if (process.env.NODE_ENV === "development") {
