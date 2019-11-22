@@ -2,7 +2,7 @@
 
 ## Links:
 
-- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [51]
+- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [59]
 - [API Specification](https://gist.github.com/bradtraversy/01adb248df70fb29e98c30cf659042cf)
 - [API Documentation](http://devcamper.io/)
 - [Finished API](https://github.com/bradtraversy/devcamper-api)
@@ -31,9 +31,12 @@
 - [bcryptjs](https://www.npmjs.com/package/bcryptjs) - for encrypting passwords
 - [jsonwebtoken](https://jwt.io/) - creating json web tokens
 - [cookie-parser](https://www.npmjs.com/package/cookie-parser) - parse Cookie header and populate req.cookies with an object keyed by the cookie names
+- [crypto](https://nodejs.org/api/crypto.html#crypto_crypto) - provides cryptographic functionality
+- [nodemailer](https://nodemailer.com/about/) - email sending
 
 # Auxiliary:
 
+- [Mailtrip](https://mailtrap.io/) - catching sended emails (fake smtp server)
 - [Synchronize Settings](https://artslab.info/vscode/sync-vs-code-settings-between-devices)
 - [Settings Gist](https://gist.github.com/aZolo77/50d2806dc21a142c0a6dad3288b48673)
 - [Generate Token](https://github.com/settings/tokens/)
