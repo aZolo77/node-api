@@ -1,13 +1,33 @@
 const express = require("express");
 const router = express.Router();
+const User = require("../models/User");
 
-const {} = require("../controllers/users");
+const {
+  getUsers,
+  getUser,
+  createUser,
+  updateUser,
+  deleteUser
+} = require("../controllers/users");
 
 // - middleware for getting data
-const User = require("../models/User");
 const advancedResults = require("../middleware/advancedResults");
 
 // - protect middleware
-const { protect } = require("../middleware/auth");
+const { protect, authorize } = require("../middleware/auth");
+
+router.use(protect);
+router.use(authorize("admin"));
+
+router
+  .route("/")
+  .get(advancedResults(User), getUsers)
+  .post(createUser);
+
+router
+  .route("/:id")
+  .get(getUser)
+  .put(updateUser)
+  .delete(deleteUser);
 
 module.exports = router;

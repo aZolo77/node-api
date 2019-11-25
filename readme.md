@@ -2,7 +2,7 @@
 
 ## Links:
 
-- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [59]
+- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [66]
 - [API Specification](https://gist.github.com/bradtraversy/01adb248df70fb29e98c30cf659042cf)
 - [API Documentation](http://devcamper.io/)
 - [Finished API](https://github.com/bradtraversy/devcamper-api)
