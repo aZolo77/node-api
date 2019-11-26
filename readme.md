@@ -2,10 +2,7 @@
 
 ## Links:
 
-- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [68]
-- [API Specification](https://gist.github.com/bradtraversy/01adb248df70fb29e98c30cf659042cf)
-- [API Documentation](http://devcamper.io/)
-- [Finished API](https://github.com/bradtraversy/devcamper-api)
+- [Digitalocean](https://cloud.digitalocean.com/) - hosting
 
 ## Environment:
 
@@ -18,6 +15,8 @@
 ## Extensions:
 
 - [Maps](https://developer.mapquest.com/)
+- [Mailtrap](https://mailtrap.io/) - catching sended emails (fake smtp server)
+- [Docgen](https://github.com/thedevsaddam/docgen) - generate documentation
 
 ## Dependencies:
 
@@ -42,7 +41,6 @@
 
 # Auxiliary:
 
-- [Mailtrip](https://mailtrap.io/) - catching sended emails (fake smtp server)
 - [Synchronize Settings](https://artslab.info/vscode/sync-vs-code-settings-between-devices)
 - [Settings Gist](https://gist.github.com/aZolo77/50d2806dc21a142c0a6dad3288b48673)
 - [Generate Token](https://github.com/settings/tokens/)
