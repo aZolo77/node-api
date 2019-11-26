@@ -2,7 +2,7 @@
 
 ## Links:
 
-- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [66]
+- [Video Course](https://coursehunter.net/course/node-js-api-master-klass-s-express-i-mongodb) [68]
 - [API Specification](https://gist.github.com/bradtraversy/01adb248df70fb29e98c30cf659042cf)
 - [API Documentation](http://devcamper.io/)
 - [Finished API](https://github.com/bradtraversy/devcamper-api)
@@ -33,6 +33,12 @@
 - [cookie-parser](https://www.npmjs.com/package/cookie-parser) - parse Cookie header and populate req.cookies with an object keyed by the cookie names
 - [crypto](https://nodejs.org/api/crypto.html#crypto_crypto) - provides cryptographic functionality
 - [nodemailer](https://nodemailer.com/about/) - email sending
+- [express-mongo-sanitize](https://www.npmjs.com/package/mongo-sanitize) - sanitizes inputs against query selector injection attacks
+- [helmet](https://helmetjs.github.io/) - setting various HTTP security headers (ex: cross-site scripting attacks)
+- [xss-clean](https://www.npmjs.com/package/xss-clean) - sanitizes user input coming from POST body, GET queries, and url params
+- [express-rate-limit](https://www.npmjs.com/package/express-rate-limit) - limits repeated requests to public API
+- [hpp](https://www.npmjs.com/package/hpp) - protect against HTTP Parameter Pollution attacks ( selects the last parameter value)
+- [cors](https://github.com/expressjs/cors) - allows resources to be requested from another domain outside the domain from which the first resource was served (Cross-origin resource sharing)
 
 # Auxiliary:
 

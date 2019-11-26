@@ -1,5 +1,11 @@
 // - dependencies
 const express = require("express");
+const cors = require("cors");
+const mongoSanitize = require("express-mongo-sanitize");
+const helmet = require("helmet");
+const xss = require("xss-clean");
+const rateLimit = require("express-rate-limit");
+const hpp = require("hpp");
 const dotenv = require("dotenv");
 const fileupload = require("express-fileupload");
 const cookieParser = require("cookie-parser");
@@ -46,6 +52,25 @@ if (process.env.NODE_ENV === "development") {
 
 // * file uploading middleware
 app.use(fileupload());
+
+// * security
+// - sanitize data (for nosql injections)
+app.use(mongoSanitize());
+// - set various HTTP security headers
+app.use(helmet());
+// - prevent XSS atacks
+app.use(xss());
+// - rate limiting
+const limiter = rateLimit({
+  windowMs: 10 * 60 * 1000, // > 10 mins
+  max: 100
+});
+app.use(limiter);
+// - prevent http param polution
+app.use(hpp());
+
+// * enable CORS
+app.use(cors());
 
 // - set static folder (ex: /uploads/photo_5d725a1b7b292f5f8ceff788.jpg)
 app.use(express.static(path.join(__dirname, "public")));
