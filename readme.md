@@ -1,4 +1,4 @@
-# Bootcamp API
+# DevCamper API
 
 ## Links:
 
@@ -39,8 +39,31 @@
 - [hpp](https://www.npmjs.com/package/hpp) - protect against HTTP Parameter Pollution attacks ( selects the last parameter value)
 - [cors](https://github.com/expressjs/cors) - allows resources to be requested from another domain outside the domain from which the first resource was served (Cross-origin resource sharing)
 
-# Auxiliary:
+## Auxiliary:
 
 - [Synchronize Settings](https://artslab.info/vscode/sync-vs-code-settings-between-devices)
 - [Settings Gist](https://gist.github.com/aZolo77/50d2806dc21a142c0a6dad3288b48673)
 - [Generate Token](https://github.com/settings/tokens/)
+
+## Usage
+
+> Rename "./config/config.env.env" to "./config/config.env" and update the values/settings to your own
+
+### Algorithm:
+
+- install dependencies
+
+        npm i
+
+- run app
+
+  - run in dev mode
+
+          npm run dev
+
+  - run in prod mode
+
+          npm start
+
+- Version: 1.0.0
+- License: ISC
